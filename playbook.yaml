@@ -18,7 +18,7 @@
     - name: run container
       docker_container:
         name: apache2
-        state: present
+        state: started
         image: sultonyakbar/httpd:5
         published_ports:
           - 8081:80

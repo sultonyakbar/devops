@@ -5,7 +5,7 @@
         name: python-docker
         state: present
       when:
-        - ansible_distribution = "Centos"
+        - ansible_distribution = "CentOS"
     - name: install python-docker
       apt: 
         name: "{{ item }}"

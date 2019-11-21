@@ -5,7 +5,7 @@
         name: python-docker
         state: present
       when:
-        - ansible_distribution = "CentOS"
+        - ansible_distribution == "CentOS"
     - name: install python-docker
       apt: 
         name: "{{ item }}"
@@ -14,7 +14,7 @@
         - python3
         - python-docker
       when:
-        - ansible_distribution = "Ubuntu"
+        - ansible_distribution == "Ubuntu"
     - name: run container
       docker_container:
         name: apache2

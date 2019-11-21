@@ -1,0 +1,22 @@
+- hosts: webserver
+  tasks: 
+    - name: install pyhton-docker
+      yum:
+        name: python-docker
+        state: present
+      when:
+        - ansible_distribution = "Centos"
+    - name:
+        apt: 
+          name:pyhton-docker
+          state: present
+        when:
+          - ansible_distrubition = "Ubuntu"
+    - name: run container
+      docker_container:
+        name: apache2
+        state: present
+        image: sultonyakbar/httpd:3
+        published_ports:
+          - 8081:80
+          

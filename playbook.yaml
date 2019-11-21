@@ -14,7 +14,7 @@
         - python3
         - python-docker
       when:
-        - ansible_distrubition = "Ubuntu"
+        - ansible_distribution = "Ubuntu"
     - name: run container
       docker_container:
         name: apache2

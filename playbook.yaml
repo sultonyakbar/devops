@@ -6,9 +6,9 @@
         state: present
       when:
         - ansible_distribution = "Centos"
-    - name:
+    - name: install python docker
         apt: 
-          name:pyhton-docker
+          name: pyhton-docker
           state: present
         when:
           - ansible_distrubition = "Ubuntu"

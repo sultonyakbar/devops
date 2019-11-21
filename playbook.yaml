@@ -8,8 +8,11 @@
         - ansible_distribution = "Centos"
     - name: install python-docker
       apt: 
-        name: pyhton-docker
+        name: {{ item }}
         state: present
+      loop:
+        - python3
+        - python-docker
       when:
         - ansible_distrubition = "Ubuntu"
     - name: run container

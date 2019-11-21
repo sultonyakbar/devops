@@ -8,7 +8,7 @@
         - ansible_distribution = "Centos"
     - name: install python-docker
       apt: 
-        name: {{ item }}
+        name: "{{ item }}"
         state: present
       loop:
         - python3

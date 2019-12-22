@@ -7,7 +7,6 @@
         state: present
       loop:
         - python3
-        - python-pip
         - python-docker
       when:
         - ansible_distribution == "CentOS"
@@ -17,7 +16,6 @@
         state: present
       loop:
         - python3
-        - python-pip
         - python-docker
       when:
         - ansible_distribution == "Ubuntu"

@@ -1,4 +1,4 @@
-- hosts: webserver
+- hosts: labs
   tasks: 
     - name: install pyhton-docker
       yum:

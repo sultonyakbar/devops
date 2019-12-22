@@ -22,7 +22,7 @@
       docker_container:
         name: apache2
         state: started
-        image: sultonyakbar/httpd:6
+        image: sultonyakbar/httpd:8
         published_ports:
           - 80:80
           

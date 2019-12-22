@@ -3,7 +3,6 @@
     - name: install pyhton-docker
       yum:
         name: python-docker
-        name: "{{ item }}"
         state: present
       loop:
         - python3

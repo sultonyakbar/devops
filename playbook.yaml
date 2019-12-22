@@ -2,12 +2,8 @@
   tasks: 
     - name: install pyhton-docker
       yum:
-        #name: python-docker
-        name: "{{ item }}"
+        name: python-docker
         state: present
-      loop:
-        - docker
-        - python-docker
       when:
         - ansible_distribution == "CentOS"
     - name: install python-docker
@@ -17,7 +13,6 @@
       loop:
         - python3
         - python-docker
-        - docker
       when:
         - ansible_distribution == "Ubuntu"
     - name: run container
